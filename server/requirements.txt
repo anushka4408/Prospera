@@ -1,0 +1,10 @@
+flask==3.0.3
+flask-cors==6.0.1
+flask-pymongo==3.0.1
+pandas==2.2.3
+scikit-learn==1.5.1
+python-dotenv==0.21.0
+cerebras-cloud-sdk==1.35.0
+pymongo==4.13.2
+numpy==1.26.4
+scipy==1.13.1 

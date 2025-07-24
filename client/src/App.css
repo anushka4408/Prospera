@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer  {
+  html, body {
+    height: 100%;
+    width: 100%;
+    /*cursor: none;*/
+    overflow: hidden;
+  }
+  #root {
+    height: 100%;
+    width: 100%;
+  }
+  .scrollbar::-webkit-scrollbar{
+    background-color: rgba(255, 255, 255, 0);
+    width: 5px;
+  }
+  .scrollbar::-webkit-scrollbar-thumb{
+    background-color: white;
+    border-radius: 10px;
+  }
+  .scrollbar-hidden::-webkit-scrollbar{
+    display: none;
+  }
+
+  .hide-spin-buttons::-webkit-inner-spin-button,
+  .hide-spin-buttons::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .hide-spin-buttons {
+    -moz-appearance: textfield;
+  }
+  a {
+    /*cursor: none;*/
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px); /* Adjust this value for more or less movement */
+    }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite; /* Adjust the duration for speed */
+  }
+
+  @keyframes float-dif {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(3px); /* Adjust this value for more or less movement */
+    }
+  }
+
+  .animate-float-dif {
+    animation: float-dif 3s ease-in-out infinite; /* Adjust the duration for speed */
+  }
+
+  .container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .box {
+    margin: 20px auto;
+  }
+
+  .left {
+    flex: 1;
+    clip-path: polygon(30% 0%, 100% 0, 70% 100%, 0% 100%);
+  }
+
+  .middle {
+    flex: 1;
+    clip-path: polygon(30% 0, 90% 0, 70% 100%, 0% 100%);
+  }
+
+  .right {
+    flex: 1;
+    clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
